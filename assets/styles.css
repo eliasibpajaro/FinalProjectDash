@@ -1,0 +1,150 @@
+:root {
+  --pastel-blue: #d7ebff;
+  --pastel-purple: #eadcff;
+  --pastel-green: #dbf7ea;
+  --ink: #243447;
+  --muted: #6c7a89;
+  --surface: #ffffff;
+  --soft-border: #e8eef5;
+}
+
+body {
+  background: linear-gradient(135deg, #f7fbff 0%, #fbf7ff 50%, #f8fffb 100%);
+  color: var(--ink);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+.top-navbar {
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid var(--soft-border);
+  backdrop-filter: blur(8px);
+  padding: 0.85rem 0;
+}
+
+.main-container {
+  padding: 1.5rem 2rem 3rem 2rem;
+}
+
+.brand-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #31506f;
+  box-shadow: 0 8px 24px rgba(49, 80, 111, 0.12);
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.brand-subtitle {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.tabs-card,
+.soft-card,
+.highlight-card,
+.metric-card {
+  border: 1px solid var(--soft-border);
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(48, 72, 102, 0.08);
+}
+
+.tabs-card {
+  background: rgba(255, 255, 255, 0.84);
+  margin-bottom: 1.25rem;
+}
+
+.custom-tabs {
+  border: none !important;
+}
+
+.custom-tab {
+  border: none !important;
+  padding: 0.85rem 1rem !important;
+  color: var(--muted) !important;
+  background: transparent !important;
+  font-weight: 650;
+}
+
+.custom-tab-selected {
+  color: #255f91 !important;
+  background: var(--pastel-blue) !important;
+  border-radius: 16px !important;
+}
+
+.tab-content-wrapper {
+  margin-top: 1rem;
+}
+
+.section-kicker {
+  color: #6879d8;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  margin-bottom: 0.35rem;
+}
+
+.page-title {
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 980px;
+}
+
+.soft-card {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-green));
+}
+
+.metric-card {
+  text-align: center;
+  background: #fff;
+}
+
+.metric-card h3 {
+  font-weight: 850;
+  color: #255f91;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--pastel-blue);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #31506f;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+}
+
+.card-title {
+  font-weight: 800;
+}
+
+.card-text {
+  color: var(--muted);
+}
+
+label {
+  font-weight: 700;
+  color: #37485c;
+  margin-bottom: 0.35rem;
+}
