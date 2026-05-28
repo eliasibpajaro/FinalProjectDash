@@ -1651,19 +1651,25 @@ def register_callbacks(app):
     @app.callback(
         Output("cmp-spec-summary", "children"),
         Output("cmp-spec-graph", "figure"),
+
+        # ÚNICO disparador pesado:
+        # Render solo recalcula cuando presionas este botón.
         Input("cmp-spec-button", "n_clicks"),
-        Input("cmp-apply-gate", "value"),
-        Input("cmp-gate-alpha", "value"),
-        Input("cmp-gate-beta", "value"),
-        Input("cmp-spec-fixed-magnitude", "value"),
-        Input("cmp-spec-fixed-rrup", "value"),
-        Input("cmp-spec-fixed-zhypo", "value"),
-        Input("cmp-spec-fixed-soil", "value"),
-        Input("cmp-spec-fixed-rvolc", "value"),
-        Input("cmp-spec-var", "value"),
-        Input("cmp-spec-var-min", "value"),
-        Input("cmp-spec-var-max", "value"),
-        Input("cmp-spec-var-n", "value"),
+
+        # Todo lo demás se lee al momento del click.
+        State("cmp-apply-gate", "value"),
+        State("cmp-gate-alpha", "value"),
+        State("cmp-gate-beta", "value"),
+        State("cmp-spec-fixed-magnitude", "value"),
+        State("cmp-spec-fixed-rrup", "value"),
+        State("cmp-spec-fixed-zhypo", "value"),
+        State("cmp-spec-fixed-soil", "value"),
+        State("cmp-spec-fixed-rvolc", "value"),
+        State("cmp-spec-var", "value"),
+        State("cmp-spec-var-min", "value"),
+        State("cmp-spec-var-max", "value"),
+        State("cmp-spec-var-n", "value"),
+
         prevent_initial_call=True,
     )
     def update_multi_spectra(
